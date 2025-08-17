@@ -11,7 +11,7 @@ services:
     # 环境变量
     envVars:
       - key: PASSWORD
-        value: "pwd"  # <-- 默认密码
+        value: "pwd"
 
     # 高级设置
     healthCheckPath: /v1/models
