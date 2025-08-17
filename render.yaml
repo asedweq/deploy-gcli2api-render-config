@@ -10,8 +10,9 @@ services:
 
     # 环境变量
     envVars:
+      # 设置一个明确的占位符，用户部署后必须修改
       - key: PASSWORD
-        value: "pwd"
+        value: "PLEASE_CHANGE_ME_AFTER_DEPLOY"
 
     # 高级设置
     healthCheckPath: /v1/models
