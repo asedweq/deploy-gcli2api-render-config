@@ -1,12 +1,16 @@
+# render.yaml
+# 确保部署 ghcr.io/cetaceang/gcli2api:latest 的最简配置
+
 services:
   - type: web
-    name: gcli2api-latest
-    region: singapore
-    plan: free
-    env: docker
+    name: gcli2api-service         # 服务名称
+    env: docker                   # 指定环境为 Docker
+    region: singapore             # 预设部署区域
+    plan: free                    # 预设使用免费套餐
     
+    # 直接指向您的公开 Docker 镜像
     image:
       url: ghcr.io/cetaceang/gcli2api:latest
 
-    # 高级设置
+    # 保留健康检查路径，这有助于 Render 监控您的服务是否正常启动
     healthCheckPath: /v1/models
